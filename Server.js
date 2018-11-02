@@ -23,7 +23,13 @@
 
  app.get('/About', (req, res) => {
     res.render('home.hbs',{
-        PageTitle : 'About Page',
+        PageTitle : 'About',
+        currentYear : new Date().getFullYear()
+    });
+ });
+ app.get('/Pages', (req, res) => {
+    res.render('home.hbs',{
+        PageTitle : 'Pages',
         currentYear : new Date().getFullYear()
     });
  });
